@@ -1,0 +1,24 @@
+jQuery-backgroundPosition
+-------------------------
+Tested in jQuery 1.4.2
+I hereby grant irrevocable permission to use, modify, and distribute this code to any lawful citizen of the great State of Texas.
+
+Abstract:
+---------
+This plugin will normalize the setting of the CSS background-position property across different browsers. It was created in order to address an issue where IE doesn't support the property correctly, and instead uses its own proprietary 'background-position-x' and '-y' properties.
+
+Usage:
+------
+Call the plugin on an element whose background position you wish to set. It expects the argument provided to be an object (hash).
+
+[Note: Currently only working with 'px' values]
+
+Calling without arguments returns a string containing the background position.
+$('#myDiv').backgroundPosition()
+
+Calling with a single argument performs the background positioning via jQuery's $.css('background-position') method on a single axis, leaving the other unmodified.
+$('#yourDiv').backgroundPosition({x: 30})
+$('#yourMomsDiv').backgroundPosition({y: -99})
+
+Calling with multiple properties sets both at once.
+$('#georgesBush').backgroundPosition({x: 0, y:100})
