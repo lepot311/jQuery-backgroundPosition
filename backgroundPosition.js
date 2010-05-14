@@ -1,12 +1,6 @@
-var isIE = $.browser.msie ? true : false
-
-function debug(trace){
-  $('#debug').text(String(trace))
-}
-
 $.fn.extend({
   backgroundPosition: function(kwargs) {
-    if (isIE) {
+    if ($.browser.msie) {
       if (kwargs.x && kwargs.y) {
         this.css('background-position-x', kwargs.x)
             .css('background-position-y', kwargs.y)
